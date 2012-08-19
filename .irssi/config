@@ -32,13 +32,13 @@ channels = (
 );
 
 ignores = (
-  { mask = "#coffeescript"; level = "JOINS PARTS QUITS"; },
-  { mask = "#stripe"; level = "JOINS PARTS QUITS"; },
-  { mask = "#github"; level = "JOINS PARTS QUITS"; },
-  { mask = "#startups"; level = "JOINS PARTS QUITS"; },
-  { mask = "#express"; level = "JOINS PARTS QUITS"; },
-  { mask = "#node.js"; level = "JOINS PARTS QUITS"; },
-  { mask = "#android"; level = "JOINS PARTS QUITS"; }
+  { level = "JOINS PARTS QUITS"; channels = ( "#coffeescript" ); }
+  { level = "JOINS PARTS QUITS"; channels = ( "#stripe" ); }
+  { level = "JOINS PARTS QUITS"; channels = ( "#github" ); }
+  { level = "JOINS PARTS QUITS"; channels = ( "#startups" ); }
+  { level = "JOINS PARTS QUITS"; channels = ( "#express" ); }
+  { level = "JOINS PARTS QUITS"; channels = ( "#node.js" ); }
+  { level = "JOINS PARTS QUITS"; channels = ( "#android" ); }
 );
 
 aliases = {
