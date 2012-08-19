@@ -1,0 +1,55 @@
+servers = (
+  {
+    address = "irc.freenode.org";
+    chatnet = "Freenode";
+    port = "6667";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.stripe.com";
+    chatnet = "Stripe";
+    port = "6697";
+    use_ssl = "yes";
+    autoconnect = "yes";
+  }
+);
+
+chatnets = {
+  Freenode = { type = "IRC";
+  autosendcmd = "MSG nickserv IDENTIFY <password>";
+  };
+  Stripe = { type = "IRC"; };
+};
+
+channels = (
+  { name = "#stripe"; chatnet = "Stripe"; autojoin = "yes"; },
+  { name = "#github"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#coffeescript"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#startups"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#express"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#node.js"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#android"; chatnet = "Freenode"; autojoin = "yes"; }
+);
+
+ignores = (
+  { mask = "#coffeescript"; level = "JOINS PARTS QUITS"; },
+  { mask = "#stripe"; level = "JOINS PARTS QUITS"; },
+  { mask = "#github"; level = "JOINS PARTS QUITS"; },
+  { mask = "#startups"; level = "JOINS PARTS QUITS"; },
+  { mask = "#express"; level = "JOINS PARTS QUITS"; },
+  { mask = "#node.js"; level = "JOINS PARTS QUITS"; },
+  { mask = "#android"; level = "JOINS PARTS QUITS"; }
+);
+
+aliases = {
+wc = "window close";
+quit = "echo use //quit instead!";
+};
+
+settings = {
+  core = {
+    user_name = "loglaunch";
+    nick = "loglaunch";
+  };
+  "fe-common/core" = { theme = "telix"; };
+};
